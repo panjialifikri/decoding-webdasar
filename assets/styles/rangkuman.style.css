@@ -1,0 +1,64 @@
+img + p {
+  color: green;
+} /*Adjacent Sibling Selector menggabungkan dua buah basic selector dengan menggunakan tanda + di antara keduanya. Adjacent Sibling Selector terdiri dari dua buah target elemen, tetapi hanya elemen kedua yang menerapkan rule selama elemen tersebut dituliskan langsung setelah elemen pertama pada berkas HTML. Selain itu, kedua elemen tersebut harus berada dalam induk elemen yang sama. Pada contoh di atas, rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen gambar.*/
+
+div > p {
+  background-color: yellow;
+} /*Child Selector menggabungkan dua buah basic selector dengan menggunakan tanda greater than (>) di antara basic selectornya. Sebagaimana contoh di atas, CSS rule akan diterapkan pada seluruh elemen paragraf yang berada dalam elemen <div> secara langsung. Dalam arti lain, elemen paragraf merupakan child dari elemen <div>, bukan hanya sebuah turunannya.*/
+
+div p {
+  background-color: yellow;
+} /*Descendant Selector mirip seperti child selector, tetapi hierarkinya lebih luas karena rule akan diterapkan pada seluruh elemen yang menjadi turunannya walaupun secara tidak langsung. Basic selector pertama yang dituliskan pada selector ini menjadi induknya dan basic selector yang kedua akan menerapkan rule. Selector ini menggunakan spasi dalam menggabungkan dua basic selector.*/
+
+a:hover {
+  color: blue;
+} /*Pseudo Selector Selector ini menargetkan elemen pada bagian yang “tidak terlihat”, seperti sifat pada elemen sehingga untuk menetapkannya tidak bisa menggunakan selector biasa. Contoh kode di atas merupakan salah satu pseudo-class selector, yang menyebabkan elemen anchor menerapkan warna biru ketika kursor diarahkan pada elemen tersebut.*/
+
+.box {
+  height: 300px;
+  width: 300px;
+} /*Secara standar, sebuah box yang dihasilkan tiap elemen selalu cukup untuk menampung konten. Namun, kita dapat mengatur nilai dimensi dari box tersebut dengan properti width dan height.*/
+
+.content {
+  max-width: 800px;
+  height: 400px;
+} /*Limiting Dimension 
+min-width: menetapkan nilai lebar minimal yang harus dimiliki elemen.
+max-width: menetapkan nilai lebar maksimal yang harus dimiliki elemen.*/
+
+div {
+  overflow: auto;
+  overflow: scroll;
+  overflow: visible;
+} /*Overflowing Content
+    Dimensi box yang dihasilkan elemen selalu cukup untuk menampung konten tetapi hal ini tidak berlaku jika kita tetapkan secara manual panjang dan lebarnya. Tak jarang terjadi overflow ketika kita menerapkan ukuran pada elemen tetapi konten di dalamnya begitu banyak.*/
+
+.content {
+  box-sizing: content-box;
+}
+.box {
+  box-sizing: border-box;
+}
+/*Dengan menggunakan properti box-sizing, kita dapat menentukannya berdasarkan border box, di mana ukuran elemen sudah termasuk content, padding dan border. Dengan metode ini, hasil elemen yang ditampilkan (termasuk padding dan border) akan memiliki dimensi yang sama persis seperti yang kita tentukan.*/
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+  box-shadow: 6px 6px 5px 10px #666666;
+} /*Box Shadow
+Pada materi formatting text, kita sudah belajar cara menambahkan drop shadow pada teks. Pada CSS3, kita juga dapat menambahkan drop shadow di sekitar kotak elemen (tidak termasuk margin) dengan menggunakan properti box-shadow.*/
+
+.rounded {
+  width: 300px;
+  padding: 20px;
+  border: 4px solid deeppink;
+  border-radius: 10px;
+} /*Rounded Corner
+CSS3 memperkenalkan kemampuan untuk membuat rounded corner atau sudut bundar pada box dengan menggunakan properti border-radius. Nilai dari properti ini merupakan tingkat lengkungan border dalam piksel.*/
+
+.box {
+  float: left;
+  float: right;
+} /*Floating
+Secara sederhananya, properti float dapat membuat elemen berada pada sebelah kanan atau kiri. Bahkan, jika diterapkan pada elemen inline memungkinkan elemen di sekitarnya mengelilingi elemen tersebut (wrap). */
